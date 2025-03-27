@@ -1,5 +1,7 @@
-
+import './vite.config.js'
 import './App.css'
+import './TodoList.jsx'
+import './TodoForm.jsx'
 
 function App() {
   const todos = [
@@ -10,13 +12,16 @@ function App() {
   
 
   return (
+    <>
     <div>
-      <h1>My <Todos></Todos></h1>
-      <ul>
-       {todos.map(todo => <li key={todo.id}>{todo.title}</li>)}
-      </ul>
+      <h1>My <todos></todos></h1>
+      
+      {/* Adding an instance of todolist and todoform here */}
+      <TodoForm/>
+      <TodoList/> 
+      
     </div>
-  );
+  </>);
 }
 
 export default App
